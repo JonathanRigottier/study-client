@@ -3,16 +3,57 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {RouterModule, Routes} from "@angular/router";
+import { HomeComponent } from './home/home.component';
+import { SchoolComponent } from './school/school.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {AppInterceptor} from "./shared/interceptor/app.interceptor";
+import {AppRoutingModule} from "./app-routing/app-routing.module";
+import {MatButtonModule} from "@angular/material/button";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatCardModule} from "@angular/material/card";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import { AddSchoolComponent } from './school/add-school/add-school.component';
 
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'school',
+    component: SchoolComponent
+  },
+
+];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    SchoolComponent,
+    AddSchoolComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forChild(appRoutes),
+    AppRoutingModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule,
+    HttpClientModule
   ],
-  providers: [],
+  exports: [RouterModule],
+  providers: [{
+      provide: HTTP_INTERCEPTORS,
+      useClass: AppInterceptor,
+      multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
