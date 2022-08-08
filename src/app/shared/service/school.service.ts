@@ -14,4 +14,8 @@ export class SchoolService {
   public getAllSchools(): Observable<School[]> {
     return this.httpClient.get<School[]>(this.SCHOOL_BASE_URL);
   }
+
+  public createSchool(form: any): Observable<any> {
+    return this.httpClient.post(this.SCHOOL_BASE_URL, form);
+  }
 }

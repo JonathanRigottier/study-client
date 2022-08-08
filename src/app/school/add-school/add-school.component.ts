@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {SchoolService} from "../../shared/service/school.service";
+import {School} from "../../shared/model/school";
+import {Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
+
 
 @Component({
   selector: 'app-add-school',
@@ -7,9 +13,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddSchoolComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup = new FormGroup({});
+
+  constructor(private fb: FormBuilder) { };
 
   ngOnInit(): void {
+    this.form = this.fb.group({
+      name: [null],
+      city: [null],
+      phone: [null]
+    });
   }
 
+  saveDetails(form: any) {
+    alert(JSON.stringify(form.value, null, 4));
+    //return this.httpClient.post('school', (JSON.stringify(form.value, null, 4)));
+  }
 }

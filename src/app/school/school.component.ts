@@ -11,7 +11,7 @@ export class SchoolComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'city', 'phone', 'createdDate', 'isActive'];
   dataSource: School[] = [];
 
-  constructor(private schoolService: SchoolService) { }
+  constructor(private schoolService: SchoolService) { };
 
   ngOnInit(): void {
     this.schoolService.getAllSchools().subscribe(value => {

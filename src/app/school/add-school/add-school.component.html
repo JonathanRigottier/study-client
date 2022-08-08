@@ -1,1 +1,22 @@
-<p>add-school works!</p>
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="saveDetails(form)">
+    <mat-form-field appearance="standard">
+      <mat-label>Name of the School</mat-label>
+      <input placeholder="Type name of the school" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>City of the School</mat-label>
+      <input placeholder="Type name of the school" formControlName="city" >
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Phone number of the School</mat-label>
+      <input placeholder="Type phone number of the school" formControlName="phone" >
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary" type="submit" >Submit</button>
+    </div>
+  </form>
+  <div>{{ form.value | json }}</div>

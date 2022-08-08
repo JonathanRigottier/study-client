@@ -16,6 +16,13 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import { AddSchoolComponent } from './school/add-school/add-school.component';
+import { CourseComponent } from './course/course.component';
+import { TeacherComponent } from './teacher/teacher.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatIconModule} from "@angular/material/icon";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatDialogModule} from "@angular/material/dialog";
 
 const appRoutes: Routes = [
   {
@@ -26,6 +33,18 @@ const appRoutes: Routes = [
     path: 'school',
     component: SchoolComponent
   },
+  {
+    path: 'course',
+    component: CourseComponent
+  },
+  {
+    path: 'teacher',
+    component: TeacherComponent
+  },
+  {
+    path: 'school/create',
+    component: AddSchoolComponent
+  },
 
 ];
 @NgModule({
@@ -33,7 +52,9 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     SchoolComponent,
-    AddSchoolComponent
+    AddSchoolComponent,
+    CourseComponent,
+    TeacherComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +67,12 @@ const appRoutes: Routes = [
     MatPaginatorModule,
     MatTableModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   exports: [RouterModule],
   providers: [{
