@@ -15,7 +15,7 @@ export class AddSchoolComponent implements OnInit {
 
   form: FormGroup = new FormGroup({});
 
-  constructor(private fb: FormBuilder) { };
+  constructor(private fb: FormBuilder, private schoolService: SchoolService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -27,6 +27,6 @@ export class AddSchoolComponent implements OnInit {
 
   saveDetails(form: any) {
     alert(JSON.stringify(form.value, null, 4));
-    //return this.httpClient.post('school', (JSON.stringify(form.value, null, 4)));
+    return this.schoolService.createSchool(this.form.getRawValue()).subscribe(()=>{})
   }
 }

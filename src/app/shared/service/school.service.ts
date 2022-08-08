@@ -15,7 +15,7 @@ export class SchoolService {
     return this.httpClient.get<School[]>(this.SCHOOL_BASE_URL);
   }
 
-  public createSchool(form: any): Observable<any> {
+  public createSchool(form: School): Observable<any> {
     return this.httpClient.post(this.SCHOOL_BASE_URL, form);
   }
 }
