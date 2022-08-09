@@ -7,12 +7,20 @@
 }
 
 mat-form-field {
-  background-color: grey;
-  font-size: 20px;
+  background-color: whitesmoke;
   font-weight: bold;
   font-family: sans-serif;
-  width: 500px;
+  width: 100%;
   color: blue;
+}
+
+mat-card {
+  background-color: grey;
+}
+
+input {
+  width: 98%;
+  font-size: 25px;
 }
 
 button {

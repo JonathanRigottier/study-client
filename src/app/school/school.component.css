@@ -1,6 +1,11 @@
 table {
   width: 100%;
   background-color: dodgerblue;
+  }
+
+mat-card{
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 button {
