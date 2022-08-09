@@ -23,6 +23,9 @@ import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
+import { PipeComponent } from './shared/pipe/pipe.component';
+import { YesNoPipePipe } from './yes-no-pipe.pipe';
+
 
 const appRoutes: Routes = [
   {
@@ -54,7 +57,10 @@ const appRoutes: Routes = [
     SchoolComponent,
     AddSchoolComponent,
     CourseComponent,
-    TeacherComponent
+    TeacherComponent,
+    PipeComponent,
+    YesNoPipePipe,
+
   ],
   imports: [
     BrowserModule,
