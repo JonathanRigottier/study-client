@@ -8,6 +8,10 @@ mat-card{
   margin-left: 20px;
 }
 
+.header-button {
+  padding-left: 120px;
+}
+
 button {
   margin-left: 20px;
   margin-bottom: 20px;

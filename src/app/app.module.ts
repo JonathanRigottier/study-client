@@ -23,8 +23,10 @@ import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
-import { PipeComponent } from './shared/pipe/pipe.component';
 import { YesNoPipePipe } from './yes-no-pipe.pipe';
+import { UpdateSchoolComponent } from './school/update-school/update-school.component';
+
+
 
 
 const appRoutes: Routes = [
@@ -48,6 +50,10 @@ const appRoutes: Routes = [
     path: 'school/create',
     component: AddSchoolComponent
   },
+  {
+    path: 'school/update/:id',
+    component: UpdateSchoolComponent
+  },
 
 ];
 @NgModule({
@@ -58,8 +64,8 @@ const appRoutes: Routes = [
     AddSchoolComponent,
     CourseComponent,
     TeacherComponent,
-    PipeComponent,
     YesNoPipePipe,
+    UpdateSchoolComponent,
 
   ],
   imports: [
