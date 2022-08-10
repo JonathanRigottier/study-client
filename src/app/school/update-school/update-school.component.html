@@ -3,17 +3,17 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
       <mat-form-field appearance="fill">
         <mat-label>Name of the School</mat-label>
-        <input placeholder="Type name of the school here" formControlName="name">
+        <input formControlName="name">
       </mat-form-field>
 
       <mat-form-field appearance="fill">
         <mat-label for="name">City of the School</mat-label>
-        <input placeholder="Type city of the school here" formControlName="city" >
+        <input formControlName="city" >
       </mat-form-field>
 
       <mat-form-field appearance="fill">
         <mat-label>Phone number of the School</mat-label>
-        <input placeholder="Type phone number of the school here" formControlName="phone" >
+        <input formControlName="phone" >
       </mat-form-field>
 
       <div mat-dialog-actions>

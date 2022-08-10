@@ -24,8 +24,10 @@ export class UpdateSchoolComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
+    console.log(this.id);
     this.schoolService.getSchoolById(this.id).subscribe(data => {
       this.school = data;
+      console.log(this.school);
       }
     )
   }
@@ -35,7 +37,9 @@ export class UpdateSchoolComponent implements OnInit {
     this.goBack();
   }
   saveDetails(form: any) {
-    return this.schoolService.createSchool(this.form.getRawValue()).subscribe(()=>{});
+    return this.schoolService.updateSchool(this.form.getRawValue(),this.id).subscribe(data =>{
+      this.goBack();
+    });
   }
 
   goBack() {
