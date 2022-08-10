@@ -8,6 +8,7 @@ import {Observable} from "rxjs";
 })
 export class SchoolService {
   private SCHOOL_BASE_URL = 'school';
+  private SCHOOL_UPDATE_URL = 'school/update';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,11 +21,11 @@ export class SchoolService {
   }
 
   getSchoolById(id: string): Observable<School>{
-    return this.httpClient.get<School>(`${this.SCHOOL_BASE_URL}/${id}`)
+    return this.httpClient.get<School>(`${this.SCHOOL_BASE_URL}/${id}`);
   }
 
-  public updateSchool(form: School, id: string): Observable<any> {
-    return this.httpClient.patch(`${this.SCHOOL_BASE_URL}/update/${id}`, form)
+  public updateSchool(form: School): Observable<any> {
+    return this.httpClient.post(this.SCHOOL_UPDATE_URL, form);
   }
 
 }

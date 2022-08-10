@@ -14,7 +14,7 @@ export class UpdateSchoolComponent implements OnInit {
   form: FormGroup = this.fb.group({
     name: [null],
     city: [null],
-    phone: [null]
+    phone: [null],
   });
 
   school: School;
@@ -25,11 +25,12 @@ export class UpdateSchoolComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     console.log(this.id);
+
     this.schoolService.getSchoolById(this.id).subscribe(data => {
       this.school = data;
       console.log(this.school);
-      }
-    )
+    });
+    console.log(this.fb.group);
   }
 
   onSubmit(form: any) {
@@ -37,9 +38,8 @@ export class UpdateSchoolComponent implements OnInit {
     this.goBack();
   }
   saveDetails(form: any) {
-    return this.schoolService.updateSchool(this.form.getRawValue(),this.id).subscribe(data =>{
-      this.goBack();
-    });
+    return this.schoolService.updateSchool(this.form.getRawValue()).subscribe(()=>{});
+    console.log(this.form);
   }
 
   goBack() {
