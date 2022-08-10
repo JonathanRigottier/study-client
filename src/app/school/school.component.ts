@@ -12,9 +12,13 @@ export class SchoolComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'city', 'phone', 'createdDate', 'isActive' , 'actions'];
   schools: School[] = [];
 
-  constructor(private schoolService: SchoolService, private router: Router) { };
+  constructor(private schoolService: SchoolService) { };
 
   ngOnInit(): void {
+    this.getSchools();
+  }
+
+  private getSchools() {
     this.schoolService.getAllSchools().subscribe(data => {
       this.schools = data;
     });

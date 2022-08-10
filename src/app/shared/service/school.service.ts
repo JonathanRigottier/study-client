@@ -19,11 +19,11 @@ export class SchoolService {
     return this.httpClient.post(this.SCHOOL_BASE_URL, form);
   }
 
-  getSchoolById(id: string | null): Observable<School>{
+  getSchoolById(id: string): Observable<School>{
     return this.httpClient.get<School>(`${this.SCHOOL_BASE_URL}/${id}`)
   }
 
-  public updateSchool(form: School, id: string | null): Observable<any> {
+  public updateSchool(form: School, id: string): Observable<any> {
     return this.httpClient.patch(`${this.SCHOOL_BASE_URL}/update/${id}`, form)
   }
 

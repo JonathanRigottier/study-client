@@ -15,7 +15,6 @@ import {MatCardModule} from "@angular/material/card";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
-import { AddSchoolComponent } from './school/add-school/add-school.component';
 import { CourseComponent } from './course/course.component';
 import { TeacherComponent } from './teacher/teacher.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -24,9 +23,9 @@ import {MatIconModule} from "@angular/material/icon";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
 import { YesNoPipePipe } from './yes-no-pipe.pipe';
-import { UpdateSchoolComponent } from './school/update-school/update-school.component';
-import { EditSchoolComponent } from './school/edit-school/edit-school.component';
 import { FormsModule } from "@angular/forms";
+import {AddSchoolComponent} from "./school/add-school/add-school.component";
+import {UpdateSchoolComponent} from "./school/update-school/update-school.component";
 
 
 const appRoutes: Routes = [
@@ -52,7 +51,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'school/update/:id',
-    component: EditSchoolComponent
+    component: UpdateSchoolComponent
   }
 
 ];
@@ -66,7 +65,6 @@ const appRoutes: Routes = [
     TeacherComponent,
     YesNoPipePipe,
     UpdateSchoolComponent,
-    EditSchoolComponent,
 
   ],
   imports: [
