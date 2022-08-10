@@ -26,7 +26,7 @@ export class UpdateSchoolComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.schoolService.getSchoolById(this.id).subscribe(data => {
       this.school = data;
-      })
+    });
 
   }
 

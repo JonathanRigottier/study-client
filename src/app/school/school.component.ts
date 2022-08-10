@@ -10,13 +10,13 @@ import {Router} from "@angular/router";
 })
 export class SchoolComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'city', 'phone', 'createdDate', 'isActive' , 'actions'];
-  dataSource: School[] = [];
+  schools: School[] = [];
 
   constructor(private schoolService: SchoolService, private router: Router) { };
 
   ngOnInit(): void {
-    this.schoolService.getAllSchools().subscribe(value => {
-      this.dataSource = value
+    this.schoolService.getAllSchools().subscribe(data => {
+      this.schools = data;
     });
   }
 
