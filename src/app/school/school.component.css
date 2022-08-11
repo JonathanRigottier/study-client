@@ -12,6 +12,14 @@ mat-card{
   padding-left: 120px;
 }
 
+.deleteButton{
+  background-color: red;
+}
+
+.restoreButton{
+  background-color: orange;
+}
+
 button {
   margin-left: 20px;
   margin-bottom: 20px;

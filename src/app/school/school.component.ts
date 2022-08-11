@@ -12,8 +12,9 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class SchoolComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'city', 'phone', 'createdDate', 'isActive' , 'actions'];
   schools: School[] = [];
-  element: boolean = true;
-  buttonId: string = "buttonId";
+  restoreShowed: boolean = true;
+  restoreHidden: boolean = false;
+
 
   constructor(private schoolService: SchoolService) { };
 
@@ -33,11 +34,15 @@ export class SchoolComponent implements OnInit {
   }
 
   setInactiveSchoolClicked(id: string) {
+    this.restoreShowed = true;
+    this.restoreHidden = false;
     let currentSchool = this.schools.find((school) => {return school.id === id});
     return this.schoolService.deleteSchool(currentSchool.id).subscribe(()=>{});
   }
 
   setRestoreSchoolClicked(id: string) {
+    this.restoreShowed = false;
+    this.restoreHidden = true;
     let currentSchool = this.schools.find((s) => {return s.id === id});
     return this.schoolService.restoreSchool(currentSchool.id).subscribe(()=>{});
   }
