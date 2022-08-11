@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {SchoolService} from "../../shared/service/school.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {School} from "../../shared/model/school";
+import {SchoolComponent} from "../school.component";
 
 @Component({
   selector: 'app-update-school',
@@ -11,11 +12,7 @@ import {School} from "../../shared/model/school";
 })
 export class UpdateSchoolComponent implements OnInit {
 
-  form: FormGroup = this.fb.group({
-    name: [null],
-    city: [null],
-    phone: [null],
-  });
+  form: FormGroup;
 
   school: School;
   id: string;
@@ -28,10 +25,28 @@ export class UpdateSchoolComponent implements OnInit {
 
     this.schoolService.getSchoolById(this.id).subscribe(data => {
       this.school = data;
-      console.log(this.school);
+      console.log(this.fb.group);
+
+      this.form = new FormGroup({
+        id: new FormControl(null),
+        name: new FormControl(null),
+        city: new FormControl(null),
+        phone: new FormControl(null),
+        isActive: new FormControl(null),
+
+        });
+      this.form.setValue({
+        id: this.school.id,
+        name: this.school.name,
+        city: this.school.city,
+        phone: this.school.phone,
+        isActive: this.school.isActive,
+      });
     });
-    console.log(this.fb.group);
+    console.log(this.form);
   }
+
+
 
   onSubmit(form: any) {
     this.saveDetails(this.form);

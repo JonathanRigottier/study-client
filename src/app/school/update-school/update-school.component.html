@@ -1,19 +1,22 @@
 <div class="container">
   <mat-card>
     <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+
+
+
       <mat-form-field appearance="fill">
-        <mat-label>Name of the School</mat-label>
-        <input formControlName="name">
+        <mat-label for="name">Name of the School</mat-label>
+        <input formControlName="name" type="text" name="name">
       </mat-form-field>
 
       <mat-form-field appearance="fill">
-        <mat-label for="name">City of the School</mat-label>
-        <input formControlName="city" >
+        <mat-label for="city">City of the School</mat-label>
+        <input formControlName="city" type="text" name="city">
       </mat-form-field>
 
       <mat-form-field appearance="fill">
-        <mat-label>Phone number of the School</mat-label>
-        <input formControlName="phone" >
+        <mat-label for="phone">Phone number of the School</mat-label>
+        <input formControlName="phone" type="text" name="phone">
       </mat-form-field>
 
       <div mat-dialog-actions>

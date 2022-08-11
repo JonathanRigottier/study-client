@@ -24,4 +24,13 @@ export class SchoolComponent implements OnInit {
     });
   }
 
+  onUpdateClicked(id: string) {
+    let currentSchool = this.schools.find((s) => {return s.id === id});
+    console.log();
+  }
+
+  currentSchoolClicked(school: School) {
+    return this.schools
+  }
+
 }
