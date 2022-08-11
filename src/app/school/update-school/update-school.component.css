@@ -19,8 +19,15 @@ mat-card {
 }
 
 input {
+  margin-top: 8px;
   width: 98%;
   font-size: 25px;
+}
+
+label {
+  margin-left: 10px;
+  font-size: 25px;
+  color: mediumpurple;
 }
 
 button {
