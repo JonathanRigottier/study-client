@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {School} from "../shared/model/school";
 import {SchoolService} from "../shared/service/school.service";
 import {Router} from "@angular/router";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-school',
@@ -11,6 +12,8 @@ import {Router} from "@angular/router";
 export class SchoolComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'city', 'phone', 'createdDate', 'isActive' , 'actions'];
   schools: School[] = [];
+  element: boolean = true;
+  buttonId: string = "buttonId";
 
   constructor(private schoolService: SchoolService) { };
 
@@ -29,8 +32,14 @@ export class SchoolComponent implements OnInit {
     console.log();
   }
 
-  currentSchoolClicked(school: School) {
-    return this.schools
+  setInactiveSchoolClicked(id: string) {
+    let currentSchool = this.schools.find((school) => {return school.id === id});
+    return this.schoolService.deleteSchool(currentSchool.id).subscribe(()=>{});
+  }
+
+  setRestoreSchoolClicked(id: string) {
+    let currentSchool = this.schools.find((s) => {return s.id === id});
+    return this.schoolService.restoreSchool(currentSchool.id).subscribe(()=>{});
   }
 
 }

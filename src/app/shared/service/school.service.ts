@@ -9,6 +9,8 @@ import {Observable} from "rxjs";
 export class SchoolService {
   private SCHOOL_BASE_URL = 'school';
   private SCHOOL_UPDATE_URL = 'school/update';
+  private SCHOOL_DELETE_URL = 'school/delete';
+  private SCHOOL_RESTORE_URL = 'school/restore';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -28,4 +30,12 @@ export class SchoolService {
     return this.httpClient.post(this.SCHOOL_UPDATE_URL, form);
   }
 
+  public deleteSchool(id: string): Observable<School> {
+    return this.httpClient.get<School>(`${this.SCHOOL_DELETE_URL}/${id}`)};
+
+  public restoreSchool(id: string): Observable<School> {
+    return this.httpClient.get<School>(`${this.SCHOOL_RESTORE_URL}/${id}`)};
+
 }
+
+
