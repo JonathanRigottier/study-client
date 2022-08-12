@@ -1,6 +1,5 @@
 table {
   width: 100%;
-  background-color: cadetblue;
   }
 
 mat-card{
@@ -25,13 +24,13 @@ mat-card{
 }
 
 .idClick {
-  color: rebeccapurple;
+  color: white;
   text-decoration: underline;
   cursor: pointer;
 }
 
 .idClick:hover {
-  color: rebeccapurple;
+  color: white;
   text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
@@ -43,8 +42,8 @@ mat-card{
 
 button {
   margin-left: 20px;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;

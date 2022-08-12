@@ -39,14 +39,6 @@ const appRoutes: Routes = [
     component: SchoolComponent
   },
   {
-    path: 'course',
-    component: CourseComponent
-  },
-  {
-    path: 'teacher',
-    component: TeacherComponent
-  },
-  {
     path: 'school/create',
     component: AddSchoolComponent
   },
@@ -58,7 +50,14 @@ const appRoutes: Routes = [
     path: 'school/:id',
     component: ViewSchoolComponent
   },
-
+  {
+    path: 'course',
+    component: CourseComponent
+  },
+  {
+    path: 'teacher',
+    component: TeacherComponent
+  },
 ];
 @NgModule({
   declarations: [
