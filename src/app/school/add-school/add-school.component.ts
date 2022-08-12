@@ -33,6 +33,9 @@ export class AddSchoolComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/school']);
+    this.router.navigate(['/school'])
+      .then(() => {
+        window.location.reload();
+      });
   }
 }

@@ -40,4 +40,8 @@ export class SchoolComponent implements OnInit {
     return this.schoolService.restoreSchool(currentSchool.id).subscribe(()=>{});
   }
 
+  reloadCurrentPage() {
+    window.location.reload();
+  }
+
 }
