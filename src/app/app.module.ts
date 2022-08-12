@@ -26,6 +26,7 @@ import { YesNoPipePipe } from './yes-no-pipe.pipe';
 import { FormsModule } from "@angular/forms";
 import {AddSchoolComponent} from "./school/add-school/add-school.component";
 import {UpdateSchoolComponent} from "./school/update-school/update-school.component";
+import { ViewSchoolComponent } from './school/view-school/view-school.component';
 
 
 const appRoutes: Routes = [
@@ -52,7 +53,11 @@ const appRoutes: Routes = [
   {
     path: 'school/update/:id',
     component: UpdateSchoolComponent
-  }
+  },
+  {
+    path: 'school/:id',
+    component: ViewSchoolComponent
+  },
 
 ];
 @NgModule({
@@ -65,6 +70,7 @@ const appRoutes: Routes = [
     TeacherComponent,
     YesNoPipePipe,
     UpdateSchoolComponent,
+    ViewSchoolComponent,
 
   ],
   imports: [
