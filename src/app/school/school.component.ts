@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {School} from "../shared/model/school";
 import {SchoolService} from "../shared/service/school.service";
-import {Router} from "@angular/router";
-import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-school',
@@ -43,5 +41,7 @@ export class SchoolComponent implements OnInit {
   reloadCurrentPage() {
     window.location.reload();
   }
+
+
 
 }

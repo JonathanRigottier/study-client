@@ -1,6 +1,6 @@
 table {
   width: 100%;
-  background-color: dodgerblue;
+  background-color: cadetblue;
   }
 
 mat-card{
@@ -8,16 +8,20 @@ mat-card{
   margin-left: 20px;
 }
 
-.header-button {
-  padding-left: 100px;
-}
-
-.deleteButton{
-  background-color: red;
+.actionTagLocation{
+  padding-left: 65px;
 }
 
 .restoreButton{
   background-color: orange;
+}
+
+.updateButton{
+  background-color: blue;
+}
+
+.deleteButton{
+  background-color: red;
 }
 
 .idClick {
@@ -33,6 +37,10 @@ mat-card{
   cursor: pointer;
 }
 
+.addSchool {
+  background-color: darkgreen;
+}
+
 button {
   margin-left: 20px;
   margin-bottom: 20px;
@@ -41,7 +49,6 @@ button {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: darkgreen;
   font-size: large;
   font-family: sans-serif;
 }

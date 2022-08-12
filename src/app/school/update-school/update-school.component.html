@@ -5,7 +5,7 @@
 
 
       <mat-form-field appearance="fill">
-        <label>New name of the school</label>
+        <label>Name of the school</label>
         <mat-label for="name">Name of the School</mat-label>
         <input formControlName="name" type="text" name="name">
       </mat-form-field>
@@ -23,8 +23,8 @@
       </mat-form-field>
 
       <div mat-dialog-actions>
-        <button mat-raised-button color="warn" routerLink="/school" > Cancel </button>
-        <button mat-raised-button color="primary" type="submit" > Submit </button>
+        <button mat-raised-button color="warn" routerLink="/school" > Cancel 	<mat-icon>backspace</mat-icon></button>
+        <button mat-raised-button class="updateButton" type="submit" > Update <mat-icon>update</mat-icon></button>
       </div>
     </form>
   </mat-card>

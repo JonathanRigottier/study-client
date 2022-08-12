@@ -15,7 +15,7 @@ mat-form-field {
 }
 
 mat-card {
-  background-color: #81a5e7;
+  background-color: slategrey;
 }
 
 input {
@@ -27,7 +27,7 @@ input {
 label {
   margin-left: 10px;
   font-size: 25px;
-  color: mediumpurple;
+  color: #81a5e7;
 }
 
 button {
@@ -37,4 +37,8 @@ button {
   font-size: 30px;
   padding: 10px;
   margin-right: 30px;
+}
+
+.updateButton {
+  background-color: #81a5e7;
 }
