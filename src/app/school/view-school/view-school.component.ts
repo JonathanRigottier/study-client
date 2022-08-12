@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {School} from "../../shared/model/school";
+import {SchoolService} from "../../shared/service/school.service";
 
 @Component({
   selector: 'app-view-school',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewSchoolComponent implements OnInit {
 
-  constructor() { }
+  school: School;
+  id: string;
+  constructor(private route: ActivatedRoute, private schoolService: SchoolService) { }
 
   ngOnInit(): void {
-  }
+    this.id = this.route.snapshot.params['id'];
+    console.log(this.id);
 
+    this.schoolService.getSchoolById(this.id).subscribe(data => {
+      this.school = data;
+      console.log(this.school.name)
+    });
+  }
 }

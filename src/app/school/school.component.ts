@@ -10,7 +10,7 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./school.component.css']
 })
 export class SchoolComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'city', 'phone', 'createdDate', 'isActive' , 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'city', 'phone', 'actions'];
   schools: School[] = [];
 
   constructor(private schoolService: SchoolService) { };
@@ -38,11 +38,6 @@ export class SchoolComponent implements OnInit {
   setRestoreSchoolClicked(id: string) {
     let currentSchool = this.schools.find((s) => {return s.id === id});
     return this.schoolService.restoreSchool(currentSchool.id).subscribe(()=>{});
-  }
-
-  viewSchoolClicked(id: string) {
-    let currentSchool = this.schools.find((s) => {return s.id === id});
-    return this.schoolService.getSchoolById(currentSchool.id).subscribe(()=>{});
   }
 
   reloadCurrentPage() {

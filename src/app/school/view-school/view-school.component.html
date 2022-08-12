@@ -1,1 +1,10 @@
-<p>view-school works!</p>
+<mat-card>
+  <h1>School details #</h1>
+  <div><span>Name of the school</span> : {{this.school.name}}</div>
+  <div><span>City of the school</span> : {{this.school.city}}</div>
+  <div><span>Phone of the school</span> : {{this.school.phone}}</div>
+  <div><span>School ID</span> : {{this.school.id}}</div>
+  <div><span>School is active</span> : {{this.school.isActive | yesNoPipe}}</div>
+  <div><span>Date the school was created</span> : {{this.school.createdDate | date: 'dd/MM/yyyy - HH:mm:ss'}}</div>
+  <button mat-raised-button color="warn" routerLink="/school" > Back </button>
+</mat-card>

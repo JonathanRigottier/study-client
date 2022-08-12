@@ -25,7 +25,6 @@ export class UpdateSchoolComponent implements OnInit {
 
     this.schoolService.getSchoolById(this.id).subscribe(data => {
       this.school = data;
-      console.log(this.fb.group);
 
       this.form = new FormGroup({
         id: new FormControl(null),
@@ -54,7 +53,6 @@ export class UpdateSchoolComponent implements OnInit {
   }
   saveDetails(form: any) {
     return this.schoolService.updateSchool(this.form.getRawValue()).subscribe(()=>{});
-    console.log(this.form);
   }
 
   goBack() {
