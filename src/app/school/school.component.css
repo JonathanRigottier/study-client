@@ -20,6 +20,19 @@ mat-card{
   background-color: orange;
 }
 
+.idClick {
+  color: rebeccapurple;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.idClick:hover {
+  color: rebeccapurple;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 button {
   margin-left: 20px;
   margin-bottom: 20px;

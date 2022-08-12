@@ -40,6 +40,11 @@ export class SchoolComponent implements OnInit {
     return this.schoolService.restoreSchool(currentSchool.id).subscribe(()=>{});
   }
 
+  viewSchoolClicked(id: string) {
+    let currentSchool = this.schools.find((s) => {return s.id === id});
+    return this.schoolService.getSchoolById(currentSchool.id).subscribe(()=>{});
+  }
+
   reloadCurrentPage() {
     window.location.reload();
   }
