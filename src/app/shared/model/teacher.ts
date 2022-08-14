@@ -11,12 +11,11 @@ export class Teacher {
   school: School;
   courses: [Course];
   isActive: boolean;
-  joinDate: Date;
   createdDate: Date;
 
   constructor(id: string, firstName: string, lastName: string, address: string, email: string,
               phone: string, school: School, courses: [Course], isActive: boolean,
-              joinDate: Date, createdDate: Date) {
+              createdDate: Date) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
@@ -26,7 +25,6 @@ export class Teacher {
     this.school = school;
     this.courses = courses;
     this.isActive = isActive;
-    this.joinDate = joinDate;
     this.createdDate = createdDate;
   }
 
