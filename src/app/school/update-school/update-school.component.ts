@@ -3,7 +3,6 @@ import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {SchoolService} from "../../shared/service/school.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {School} from "../../shared/model/school";
-import {SchoolComponent} from "../school.component";
 
 @Component({
   selector: 'app-update-school',
@@ -21,7 +20,6 @@ export class UpdateSchoolComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
-    console.log(this.id);
 
     this.schoolService.getSchoolById(this.id).subscribe(data => {
       this.school = data;
@@ -42,10 +40,7 @@ export class UpdateSchoolComponent implements OnInit {
         isActive: this.school.isActive,
       });
     });
-    console.log(this.form);
   }
-
-
 
   onSubmit(form: any) {
     this.saveDetails(this.form);

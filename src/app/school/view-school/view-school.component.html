@@ -5,6 +5,6 @@
   <div><span>Phone of the school</span> : {{this.school.phone}}</div>
   <div><span>School ID</span> : {{this.school.id}}</div>
   <div><span>School is active</span> : {{this.school.isActive | yesNoPipe}}</div>
-  <div><span>Date the school was created</span> : {{this.school.createdDate | date: 'dd/MM/yyyy - HH:mm:ss'}}</div>
+  <div><span>Date the school was created</span> : {{this.school.createdDate | date :'dd/MM/yyyy - HH:mm:ss':'+0000'}}</div>
   <button mat-raised-button color="warn" routerLink="/school" > Back </button>
 </mat-card>

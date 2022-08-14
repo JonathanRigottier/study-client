@@ -1,0 +1,23 @@
+<div class="container">
+<mat-card>
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+
+    <mat-form-field appearance="fill">
+      <label>Name of the course</label>
+      <mat-label for="name">Name of the course</mat-label>
+      <input formControlName="name" type="text" name="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <label>Duration in hours</label>
+      <mat-label for="durationHours">Duration in hours</mat-label>
+      <input formControlName="durationHours" type="text" name="durationHours">
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-raised-button color="warn" routerLink="/course" > Cancel 	<mat-icon>backspace</mat-icon></button>
+      <button mat-raised-button class="updateButton" type="submit" > Update <mat-icon>update</mat-icon></button>
+    </div>
+  </form>
+</mat-card>
+</div>

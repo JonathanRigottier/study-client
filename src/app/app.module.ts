@@ -27,6 +27,9 @@ import { FormsModule } from "@angular/forms";
 import {AddSchoolComponent} from "./school/add-school/add-school.component";
 import {UpdateSchoolComponent} from "./school/update-school/update-school.component";
 import { ViewSchoolComponent } from './school/view-school/view-school.component';
+import { AddCourseComponent } from './course/add-course/add-course.component';
+import { UpdateCourseComponent } from './course/update-course/update-course.component';
+import { ViewCourseComponent } from './course/view-course/view-course.component';
 
 
 const appRoutes: Routes = [
@@ -55,6 +58,18 @@ const appRoutes: Routes = [
     component: CourseComponent
   },
   {
+    path: 'course/create',
+    component: AddCourseComponent
+  },
+  {
+    path: 'course/update/:id',
+    component: UpdateCourseComponent
+  },
+  {
+    path: 'course/:id',
+    component: ViewCourseComponent
+  },
+  {
     path: 'teacher',
     component: TeacherComponent
   },
@@ -70,6 +85,9 @@ const appRoutes: Routes = [
     YesNoPipePipe,
     UpdateSchoolComponent,
     ViewSchoolComponent,
+    AddCourseComponent,
+    UpdateCourseComponent,
+    ViewCourseComponent,
 
   ],
   imports: [

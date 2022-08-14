@@ -1,0 +1,9 @@
+<mat-card>
+  <h1>Course details #</h1>
+  <div><span>Name of the course</span> : {{this.course.name}}</div>
+  <div><span>Duration in hours of the course</span> : {{this.course.durationHours}}</div>
+  <div><span>Course ID</span> : {{this.course.id}}</div>
+  <div><span>Course is active</span> : {{this.course.isActive | yesNoPipe}}</div>
+  <div><span>Date the course was created</span> : {{this.course.createdDate | date :'dd/MM/yyyy - HH:mm:ss':'+0000'}}</div>
+  <button mat-raised-button color="warn" routerLink="/course" > Back </button>
+</mat-card>

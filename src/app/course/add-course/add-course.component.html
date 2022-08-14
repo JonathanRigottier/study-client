@@ -1,0 +1,20 @@
+<div class="container">
+  <mat-card>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+      <mat-form-field appearance="fill">
+        <mat-label>Name of the Course</mat-label>
+        <input placeholder="Type name of the course here" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label for="name">Duration in hours of the course</mat-label>
+        <input placeholder="Duration of the course here" formControlName="durationHours" >
+      </mat-form-field>
+
+      <div mat-dialog-actions>
+        <button mat-raised-button color="warn" routerLink="/course" > Cancel <mat-icon> cancel_presentation</mat-icon></button>
+        <button mat-raised-button class="submitButton" type="submit" > Submit <mat-icon>done_outline</mat-icon> </button>
+      </div>
+    </form>
+  </mat-card>
+</div>

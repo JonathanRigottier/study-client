@@ -16,11 +16,9 @@ export class ViewSchoolComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
-    console.log(this.id);
 
     this.schoolService.getSchoolById(this.id).subscribe(data => {
       this.school = data;
-      console.log(this.school.name)
     });
   }
 }
