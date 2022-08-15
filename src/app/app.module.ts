@@ -30,6 +30,9 @@ import { ViewSchoolComponent } from './school/view-school/view-school.component'
 import { AddCourseComponent } from './course/add-course/add-course.component';
 import { UpdateCourseComponent } from './course/update-course/update-course.component';
 import { ViewCourseComponent } from './course/view-course/view-course.component';
+import { AddTeacherComponent } from './teacher/add-teacher/add-teacher.component';
+import { UpdateTeacherComponent } from './teacher/update-teacher/update-teacher.component';
+import { ViewTeacherComponent } from './teacher/view-teacher/view-teacher.component';
 
 
 const appRoutes: Routes = [
@@ -73,6 +76,18 @@ const appRoutes: Routes = [
     path: 'teacher',
     component: TeacherComponent
   },
+  {
+    path: 'teacher/create',
+    component: AddTeacherComponent
+  },
+  {
+    path: 'teacher/update/:id',
+    component: UpdateTeacherComponent
+  },
+  {
+    path: 'teacher/:id',
+    component: ViewTeacherComponent
+  }
 ];
 @NgModule({
   declarations: [
@@ -88,6 +103,9 @@ const appRoutes: Routes = [
     AddCourseComponent,
     UpdateCourseComponent,
     ViewCourseComponent,
+    AddTeacherComponent,
+    UpdateTeacherComponent,
+    ViewTeacherComponent,
 
   ],
   imports: [

@@ -24,8 +24,7 @@ export class SchoolComponent implements OnInit {
   }
 
   onUpdateClicked(id: string) {
-    let currentSchool = this.schools.find((s) => {return s.id === id});
-    console.log();
+    let currentSchool = this.schools.find((school) => {return school.id === id});
   }
 
   setInactiveSchoolClicked(id: string) {
@@ -34,14 +33,11 @@ export class SchoolComponent implements OnInit {
   }
 
   setRestoreSchoolClicked(id: string) {
-    let currentSchool = this.schools.find((s) => {return s.id === id});
+    let currentSchool = this.schools.find((school) => {return school.id === id});
     return this.schoolService.restoreSchool(currentSchool.id).subscribe(()=>{});
   }
 
   reloadCurrentPage() {
     window.location.reload();
   }
-
-
-
 }
