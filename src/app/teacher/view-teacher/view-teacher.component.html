@@ -1,0 +1,13 @@
+<mat-card>
+  <h1>Teacher details #</h1>
+  <div><span>Firstname of the teacher</span> : {{this.teacher.firstName}}</div>
+  <div><span>Lastname of the teacher</span> : {{this.teacher.lastName}}</div>
+  <div><span>Address of the teacher</span> : {{this.teacher.address}}</div>
+  <div><span>Email of the teacher</span> : {{this.teacher.email}}</div>
+  <div><span>Phone of the teacher</span> : {{this.teacher.phone}}</div>
+  <div><span>Teacher ID</span> : {{this.teacher.id}}</div>
+  <div><span>Teacher is active</span> : {{this.teacher.isActive | yesNoPipe}}</div>
+  <div><span>Date the teacher was created</span> :
+    {{this.teacher.createdDate | date :'dd/MM/yyyy - HH:mm:ss':'+0000'}}</div>
+  <button mat-raised-button color="warn" routerLink="/teacher" > Back </button>
+</mat-card>

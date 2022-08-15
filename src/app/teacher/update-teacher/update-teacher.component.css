@@ -1,0 +1,44 @@
+:host {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+mat-form-field {
+  background-color: whitesmoke;
+  font-weight: bold;
+  font-family: sans-serif;
+  width: 100%;
+  color: blue;
+}
+
+mat-card {
+  background-color: slategrey;
+}
+
+input {
+  margin-top: 8px;
+  width: 98%;
+  font-size: 25px;
+}
+
+label {
+  margin-left: 10px;
+  font-size: 25px;
+  color: #81a5e7;
+}
+
+button {
+  display:inline-block;
+  margin-top: 20px;
+  text-align:center;
+  font-size: 30px;
+  padding: 10px;
+  margin-right: 30px;
+}
+
+.updateButton {
+  background-color: #81a5e7;
+}

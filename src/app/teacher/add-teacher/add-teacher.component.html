@@ -1,0 +1,35 @@
+<div class="container">
+  <mat-card>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+      <mat-form-field appearance="fill">
+        <mat-label for="firstName">Firstname of the teacher</mat-label>
+        <input placeholder="Type firstname of the teacher here" formControlName="firstName">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label for="lastName">Lastname of the teacher</mat-label>
+        <input placeholder="Type lastname of the teacher here" formControlName="lastName" >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label for="address">Address of the teacher</mat-label>
+        <input placeholder="Type address of the teacher here" formControlName="address" >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label for="email">Email of the teacher</mat-label>
+        <input placeholder="Type email of the teacher here" formControlName="email" >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label for="phone">Address of the teacher</mat-label>
+        <input placeholder="Type phone of the teacher here" formControlName="phone" >
+      </mat-form-field>
+
+      <div mat-dialog-actions>
+        <button mat-raised-button color="warn" routerLink="/teacher" > Cancel <mat-icon> cancel_presentation</mat-icon></button>
+        <button mat-raised-button class="submitButton" type="submit" > Submit <mat-icon>done_outline</mat-icon> </button>
+      </div>
+    </form>
+  </mat-card>
+</div>
